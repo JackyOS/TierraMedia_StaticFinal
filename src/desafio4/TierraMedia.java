@@ -18,7 +18,7 @@ public class TierraMedia {
 		personas = new LinkedList<>();
 		atracciones = new LinkedList<>();
 	}
-	
+	 
 	
 	public boolean agregarListaPersonas(String rutaArchivo) {
 		return personas.addAll(LectorPersonas.cargarPersonas(rutaArchivo));
