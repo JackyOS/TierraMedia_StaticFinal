@@ -7,7 +7,7 @@ public class Persona {
 	
 	private String nombre;
 	private int dinero;
-	private int horasDisponibles;
+	private double horasDisponibles;
 	
 	
 
@@ -28,7 +28,7 @@ public class Persona {
 	}
 
 
-	public int getHorasDisponibles() {
+	public double getHorasDisponibles() {
 		return horasDisponibles;
 	}
 

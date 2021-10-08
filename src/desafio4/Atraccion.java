@@ -54,7 +54,7 @@ public class Atraccion implements Comparable<Atraccion> {
 	
 	@Override
 	public int compareTo(Atraccion o) {
-		return this.costo.compareTo(o.costo); //ordeno de forma natural, segun el costo de cada atraccion.
+		return -this.costo.compareTo(o.costo); //ordeno de forma natural, segun el costo de cada atraccion.
 	}
 	
 	

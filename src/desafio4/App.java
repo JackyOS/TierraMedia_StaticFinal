@@ -12,6 +12,9 @@ public class App {
 	
 		System.out.println("\t Bienvenidos a Tierra Media");
 		
+		
+		//System.out.println(p.getAtracciones());
+		
 		p.hacerSugerencia();
 		
 		

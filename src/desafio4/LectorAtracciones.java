@@ -35,7 +35,7 @@ public class LectorAtracciones {
 				String nombre = datos[0];
 				int costo = Integer.parseInt(datos[1]); 				
 				double duracion = Double.parseDouble(datos[2]); 	
-				int cupo = Integer.parseInt(datos[2]); 	
+				int cupo = Integer.parseInt(datos[3]); 	
 
 				
 				//AGREGO LOS DATOS A LA LISTA atraccion, CREO UNa NUEVa persona cada vez que lee una linea

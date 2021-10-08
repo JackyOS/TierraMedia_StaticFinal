@@ -18,7 +18,7 @@ public class TierraMedia {
 		personas = new LinkedList<>();
 		atracciones = new LinkedList<>();
 	}
-	 
+	
 	
 	public boolean agregarListaPersonas(String rutaArchivo) {
 		return personas.addAll(LectorPersonas.cargarPersonas(rutaArchivo));
@@ -52,7 +52,7 @@ public class TierraMedia {
 				System.out.println("Usted tiene: $" + cadaPersona.getDinero() + " y " + cadaPersona.getHorasDisponibles() + " horas disponibles" + "\n");
 				
 				
-				for (Atraccion cadaAtraccion :  atracciones) {
+				for (Atraccion cadaAtraccion :  getAtracciones()) {
 
 					if (cadaPersona.getDinero() >= cadaAtraccion.getCosto()
 							&& cadaPersona.getHorasDisponibles() >= cadaAtraccion.getDuracion()
@@ -60,129 +60,40 @@ public class TierraMedia {
 						
 						
 						
-						System.out.println(String.format("%s", cadaAtraccion.formatoConsola()));				
+						System.out.println(String.format("%s", cadaAtraccion.formatoConsola()));	//escribe en consola la atraccion, su precio y la duracion			
 					
 						
-					while(!respuesta.equalsIgnoreCase("S")) {
+					while(!respuesta.equalsIgnoreCase("S")) { //entro al while, mientras la respuesta (lo que se escribe por consola) no sea igual a "s", pregunta si desea comprar la atraccion
 						if(respuesta.equalsIgnoreCase("N")) {
 							break;
 						}
 						
 						System.out.println("¿Desea comprar la atraccion? S o N ");
-						usarScanner();
+						usarScanner(); //permite escribir por consola (ver el metodo de abajo)
 						
 						
 					} 
 						
 						
-						if(respuesta.equalsIgnoreCase("S")) {
+						if(respuesta.equalsIgnoreCase("S")) { //si responde "s", compra la atraccion
 						cadaPersona.comprar(cadaAtraccion);	
 						}
 						System.out.println("Usted tiene: $" + cadaPersona.getDinero() + " y " + cadaPersona.getHorasDisponibles() + " horas disponibles");
 						System.out.println("\n-------------------------------------------------------------------");
 					
-						respuesta = "a";
-					}
-					
-				}		
-				
-				
+						respuesta = "a"; //cambio la respuesta a cualquier cosa que no sea S ni N, así, en la proxima iteracion, entra al while.
+					}	
+				}			
 			}		 
 		}
 				
 		
 		public static void usarScanner() {
 			Scanner s = new Scanner(System.in); //para poder escribir por consola
-			respuesta = s.next().toUpperCase();
+			respuesta = s.next().toUpperCase(); //en respuesta se guarda lo que uno escribe en consola
 		}
 
-
-		
-		
-		
-		
-		
+	
 		
 		
 }
-
-
-/*
- * 	public void buscarAtraccionesPosibles() {
-
-		for (Persona cadaPersona : personas) {			
-			for (Atraccion cadaAtraccion :  atracciones) {
-
-				if (cadaPersona.getDinero() > cadaAtraccion.getCosto()
-						&& cadaPersona.getHorasDisponibles() > cadaAtraccion.getDuracion()
-						&& cadaAtraccion.getCupo() > 0) {		
-					
-					cadaPersona.setAtraccionesPosibles(cadaAtraccion);
-				}
-			}
-		}	
-	}
-
-
-	
-
-	public void listarAtracciones() {
-		
-		System.out.println("-------------------------------------------------------------------");
-		
-		
-		for(int i  = 0; i < personas.size(); i++) {
-						
-			System.out.println("Sugerencias: \n ");
-			System.out.println("Nombre del visitante: " + personas.get(i).getNombre() + "\n");
-			System.out.println("Usted tiene: $" + personas.get(i).getDinero() + " y " + personas.get(i).getHorasDisponibles() + " horas disponibles" + "\n");
-			
-			
-			//personas.get(i).getatraccionesPosibles().forEach(atraccion-> System.out.println(String.format("%s", atraccion.formatoConsola()))	);
-			
-			for(Atraccion atraccionesA :  personas.get(i).getatraccionesPosibles()) {
-	
-				
-				System.out.println(String.format("%s", atraccionesA.formatoConsola()));
-				
-				System.out.println("¿Desea comprar la atraccion? S o N  \n");
-				
-				usarScanner();
-				
-				while(!respuesta.equalsIgnoreCase("S")) {
-					System.out.println("¿Desea comprar la atraccion? S o N  \n");
-					usarScanner();
-				} 
-				
-					personas.get(i).comprar(atraccionesA);	
-					System.out.println("Usted tiene: $" + personas.get(i).getDinero() + " y " + personas.get(i).getHorasDisponibles() + " horas disponibles");
-					//buscarAtraccionesPosibles();
-					
-				
-				
-				
-				System.out.println("\n-------------------------------------------------------------------");
-
-			}
-						
-			
-		}
-	}
-
- * 
- * 
- * 	public void generarSugerencia(Persona p, Atraccion a, Promocion promo) {
-
-		Random randomizer = new Random();
-		Atraccion atraccionRandom = atracciones.get(randomizer.nextInt(atracciones.size()));
-
-		// Promocion promocionRandom = promociones.get()
-
-		for (Persona persona : personas) {
-			persona.comprar(atraccionRandom, 1.0);
-			System.out.println(persona);
-		}
-	}
- * 
- * 
- * */
