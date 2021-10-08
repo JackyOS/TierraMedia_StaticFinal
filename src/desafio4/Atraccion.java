@@ -9,6 +9,7 @@ public class Atraccion implements Comparable<Atraccion> {
 	
 	
 	public Atraccion(String nombre, int costo, double duracion, int cupo) {
+		super();
 		this.nombre = nombre;
 		this.costo = costo;
 		this.duracion = duracion;
@@ -33,24 +34,28 @@ public class Atraccion implements Comparable<Atraccion> {
 	}
 	
 
-	public void setCupo(int cupo) {
-		this.cupo -= cupo;
+	public void setCupo() {
+		this.cupo--;
 	}
-	
-	
-	
+
+
 	@Override
 	public String toString() {
-		return "nombre= " + nombre + ", costo= " + costo + ", duracion= " + duracion + ", cupo= " + cupo + "\n";
+		return "-Atracciones incluidas: " + "[ " + nombre + " ]" + "\n" +
+				"-Duracion: " + duracion + "\n" +
+				"-Precio original: " + costo + "\n";
 	}
-
-
+	
+	public String formatoConsola() {
+		return String.format(" -Atracciones incluidas: [%s] \n -Duracion: %s horas \n -Precio original: $%s \n", 
+				this.nombre, this.duracion, this.costo); 
+			
+	}
+	
 	@Override
 	public int compareTo(Atraccion o) {
 		return this.costo.compareTo(o.costo); //ordeno de forma natural, segun el costo de cada atraccion.
 	}
-	
-	
 	
 	
 	

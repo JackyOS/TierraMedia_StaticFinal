@@ -2,25 +2,20 @@ package desafio4;
 
 public class Promocion {
 	
-	//private Persona persona;
-	//private Atraccion atraccion;
-	private int monto;
+	protected String nombre;
+	protected Persona persona;
+	protected Atraccion atraccion;
+	protected int costoDeVisita;
+	protected double tiempoNecesario;
+	protected int cupo;
 	
 	
-	public Promocion(int monto) {
-		this.monto = monto;
-	}
+	
+	
+	
+	
 
-
-	@Override
-	public String toString() {
-		return "tipoPromocion= " + ", monto= " + monto + "\n";
-	}
+	
+	
 	
 }
-	
-	
-	
-	
-	
-	

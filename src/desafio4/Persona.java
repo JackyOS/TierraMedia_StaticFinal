@@ -1,5 +1,6 @@
 package desafio4;
 
+
 public class Persona {
 	
 	Atraccion atraccion;
@@ -7,14 +8,15 @@ public class Persona {
 	private String nombre;
 	private int dinero;
 	private int horasDisponibles;
-	//itinerario
 	
 	
+
 	public Persona(String nombre, int dinero, int horasDisponibles) {
 		this.nombre = nombre;
 		this.dinero = dinero;
 		this.horasDisponibles = horasDisponibles;
 	}
+		
 
 	public int getDinero() {
 		return dinero;
@@ -41,14 +43,20 @@ public class Persona {
 
 	
 	
+	public void comprar(Atraccion a) {
+			this.dinero -= a.getCosto() ;
+			this.horasDisponibles -= a.getDuracion();
+			a.setCupo();
+	}
 	
-	
-
+		
 	@Override
 	public String toString() {
 		return "Nombre= " + nombre + ", Dinero= " + dinero + ", Horas Disponibles= " + horasDisponibles + "\n";
 	}
-	
+
+
+
 	
 	
 	
