@@ -15,10 +15,11 @@ public class App {
 		
 		
 		//System.out.println(p.getAtracciones());
-		System.out.println(p.getPromociones());
-		//p.hacerSugerencia();
-		
-		;
+		//System.out.println(p.getPromociones());
+		p.hacerSugerencia();
+	
+		//System.out.println(p.creandoOfertas());
+
 	}
 
 }

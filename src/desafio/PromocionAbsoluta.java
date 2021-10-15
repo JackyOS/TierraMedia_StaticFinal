@@ -2,14 +2,27 @@ package desafio;
 
 import java.util.List;
 
+//Promociones absolutas ($ X por todo el paquete)
 public class PromocionAbsoluta extends Promocion{
-	
-	//Promociones absolutas ($ X por todo el paquete)
-	private int precioFinal;
-	public PromocionAbsoluta(String nombrePromocion, List<Atraccion> promociones, double porcentajePromocion,
-			int totalPromocionAbsoluta, Atraccion atraccionGratuita) {
-		super(nombrePromocion, promociones, porcentajePromocion, totalPromocionAbsoluta, atraccionGratuita);
-		this.precioFinal=this.totalPromocionAbsoluta;
+
+	public PromocionAbsoluta(String nombrePromocion, List<Atraccion> promociones, double montoPromo) {
+		super(nombrePromocion, promociones, montoPromo);
+
 	}
+	
+	
+	@Override
+	public double getDescuento() {
+		return montoPromo;
+	}
+	
+	
+	/*
+	@Override
+	public double getDescuento() {
+		return montoPromo;
+	}
+
+*/
 
 }

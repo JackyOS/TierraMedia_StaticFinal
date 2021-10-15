@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 //---------------------------HAY QUE HACERLO BIEN!!!-----------------------------------------------
 
 public class LectorPromociones {
@@ -34,6 +35,8 @@ public class LectorPromociones {
 
 				// Preparo los datos
 				String nombre = datos[0];
+				
+				//TipoPromocion tipo = TipoPromocion.valueOf(datos[1].toUpperCase());
 
 				String[] stringListaAtracciones = datos[1].split("-");
 				List<Atraccion> atraccionesDePromocion = new ArrayList<Atraccion>();
@@ -42,10 +45,9 @@ public class LectorPromociones {
 					atraccionesDePromocion.add(buscarAtraccion(stringListaAtracciones[i], atracciones));
 				}
 
-				double porcentaje = Double.parseDouble(datos[2]);
-				int valorAbsoluto = Integer.parseInt(datos[3]);
-				Atraccion atraccion = null;
-				promociones.add(new Promocion(nombre, atraccionesDePromocion, porcentaje, valorAbsoluto, atraccion));
+				double monto = Double.parseDouble(datos[2]);
+			
+				promociones.add(new Promocion(nombre, atraccionesDePromocion, monto));
 
 				linea = br.readLine(); // leemos cada linea
 			}
@@ -61,17 +63,18 @@ public class LectorPromociones {
 					e.printStackTrace();
 				}
 			}
-
+ 
 		}
 
 		return promociones;
 	}
 
 	private static Atraccion buscarAtraccion(String cadena, List<Atraccion> listaAtracciones) {
+		
 		Atraccion a = null;
-		for (int i = 0; i < listaAtracciones.size(); i++) {
-			if (listaAtracciones.get(i).getNombre().equals(cadena)) {
-				 a= listaAtracciones.get(i);
+		for (Atraccion cadaAtraccion : listaAtracciones) {
+			if (cadaAtraccion.getNombre().equals(cadena)) {
+				 a= cadaAtraccion;
 			}
 		}
 		

@@ -40,10 +40,11 @@ public class Usuario {
 		return nombreUsuario;
 	}
 
-	public void comprar(Atraccion a) {
-		this.presupuestoUsuario -= a.getCosto();
-		this.horasDisponibles -= a.getDuracion();
-		a.setCupo();
+	public void comprar(Ofertable cadaOferta) {
+		this.presupuestoUsuario -= cadaOferta.getCosto();
+		this.horasDisponibles -= cadaOferta.getDuracion();
+		cadaOferta.setCupo();
+	
 	}
 
 	@Override

@@ -1,16 +1,18 @@
 package desafio;
 
-public class Atraccion extends Oferta implements Comparable<Atraccion> {
-	/*
-	 * Cada atracción cuenta con su costo de visita, el promedio de tiempo necesario
-	 * para realizarla y el cupo de personas que pueden visitarlo a diario.
-	 */
+import java.util.List;
+
+public class Atraccion extends Ofertable implements Comparable<Atraccion> {
+	
 	private String nombreAtraccion;
-	private Integer costoAtraccion;
+	private Double costoAtraccion;
 	private double duracionAtraccion;
 	private int cupoAtraccion;
-
-	public Atraccion(String nombre, int costo, double duracion, int cupo) {
+	private static List<Atraccion> listaA; //modificar
+	
+	
+	public Atraccion(String nombre, double costo, double duracion, int cupo) {
+		super(nombre, listaA, duracion);
 		this.nombreAtraccion = nombre;
 		this.costoAtraccion = costo;
 		this.duracionAtraccion = duracion;
@@ -21,7 +23,7 @@ public class Atraccion extends Oferta implements Comparable<Atraccion> {
 		return nombreAtraccion;
 	}
 
-	public int getCosto() {
+	public double getCosto() {
 		return costoAtraccion;
 	}
 
@@ -33,32 +35,38 @@ public class Atraccion extends Oferta implements Comparable<Atraccion> {
 		return cupoAtraccion;
 	}
 
+	
 	public synchronized void setCupo() {
 		this.cupoAtraccion--;
 	}
-
+	
 	
 	@Override
 	public String toString() {
-		return "-Atracciones incluidas: " + "[ " + nombreAtraccion + " ]" + "\n" + "-Duracion: " + duracionAtraccion
-				+ "\n" + "-Precio original: " + costoAtraccion + "\n";
+		return "Nombre = " + nombreAtraccion + " costoAtraccion=" + costoAtraccion
+				+ " duracionAtraccion=" + duracionAtraccion + " cupoAtraccion=" + cupoAtraccion + "\n";
 	}
-
-	/*public String formatoConsola() {
+	
+/*
+	@Override
+	public String formatoConsola() {
 		return String.format(" -Atracciones incluidas: [%s] \n -Duracion: %s horas \n -Precio original: $%s \n",
 				this.nombreAtraccion, this.duracionAtraccion, this.costoAtraccion);
 
-	}*/
+	}
+	
+*/
+	
+	public String formatoConsola() {
+		return String.format(" -Atracción: [ %s ] \n -Duración: %s horas \n -Precio: $%s \n", 
+				nombre, duracionAtraccion, costoAtraccion); 
+	}
+
 
 	@Override
 	public int compareTo(Atraccion o) {
 		return -this.costoAtraccion.compareTo(o.costoAtraccion); // ordeno de forma natural, segun el costo de cada atraccion.
 	}
 	
-	@Override
-	public void AgregarOfertas() {
-		ofertas.add(new Atraccion(this.nombreAtraccion, this.cupoAtraccion, this.duracionAtraccion, this.cupoAtraccion));	
-	}
 
-	
 }

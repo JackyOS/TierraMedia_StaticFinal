@@ -3,23 +3,17 @@ package desafio;
 import java.util.List;
 
 public class PromocionAxB extends Promocion {
+	
+	//private List<String> atraccionesGratuitas = new ArrayList<String>("Erebor", "Bosque Negro");
 
-	private int precioFinal;
-	private Atraccion atraccionGratuita;
-
-	public PromocionAxB(String nombrePromocion, List<Atraccion> promociones, double porcentajePromocion,
-			int totalPromocionAbsoluta, Atraccion atraccionGratuita) {
-		super(nombrePromocion, promociones, porcentajePromocion, totalPromocionAbsoluta, atraccionGratuita);
-		this.precioFinal = precioFinal();
-		this.atraccionGratuita = atraccionGratuita;
+	public PromocionAxB(String nombrePromocion, List<Atraccion> promociones, double montoPromo) {
+		super(nombrePromocion, promociones, montoPromo);
+		
 	}
 
-	private int precioFinal() {
-		int precioFinal = 0;
-		for (Atraccion atraccion : promociones) {
-			precioFinal += atraccion.getCosto();
-		}
-		return precioFinal;
-	}
+
+
+
+
 
 }

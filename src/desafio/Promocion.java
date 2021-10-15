@@ -1,39 +1,112 @@
 package desafio;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class Promocion  {
-	/*
-	 * En la generación de las sugerencias deben contemplarse las promociones
-	 * vigentes. Cada promoción incluye una o varias atracciones y beneficia al
-	 * usuario con una reducción del costo total. Se espera que el sistema permita
-	 * la definición de promociones de tres tipos: Promociones porcentuales (X % de
-	 * descuento en el costo total) Promociones absolutas ($ X por todo el paquete)
-	 * Promociones A x B (si el usuario compra A, B, C entonces tiene gratis D).
-	 */
+public class Promocion extends Ofertable  {
 
-	
+	double duracionAtraccionesTotal = 0;
+	int cupoMinimoTotal = 0;
+		
 	protected String nombrePromocion;
 	protected List<Atraccion> promociones;
-	protected double porcentajePromocion;
-	protected int totalPromocionAbsoluta;
-	protected Atraccion atraccionGratuita;
-
-	public Promocion(String nombrePromocion, List<Atraccion> promociones, double porcentajePromocion,
-			int totalPromocionAbsoluta, Atraccion atraccionGratuita) {
+	protected double montoPromo;
+	
+	public Promocion(String nombrePromocion, List<Atraccion> promociones, double montoPromo) {
+		super(nombrePromocion, promociones, montoPromo);
 		this.nombrePromocion = nombrePromocion;
 		this.promociones = promociones;
-		this.porcentajePromocion = porcentajePromocion;
-		this.totalPromocionAbsoluta = totalPromocionAbsoluta;
-		this.atraccionGratuita = atraccionGratuita;
+		this.montoPromo = montoPromo;
+	}
+	
+	
+	@Override 
+	public String getNombre() {
+		//ArrayList<String> nombresPromo = new ArrayList<>();
+		
+		String nombresPromos = "";
+		
+		for(Atraccion cadaAtraccion : promociones ) {
+			//nombresPromo.add(cadaAtraccion.getNombre());
+			nombresPromos += cadaAtraccion.getNombre() ;
+		}
+		
+		return nombresPromos ;
+	}
+	
+
+	@Override 
+	public double getCosto() {
+		double valor = 0;
+		for(Atraccion cadaAtraccion : getPromociones()) {
+			valor += cadaAtraccion.getCosto();
+		}		
+		return valor;
+	}
+	
+	
+	
+	@Override 
+	public double getDuracion() {
+		double duracionTotal = 0;
+		for(Atraccion cadaAtraccion : getPromociones()) {
+			duracionTotal += cadaAtraccion.getDuracion();
+		}		
+		return duracionTotal;
+	}
+	
+	
+	@Override 
+	public int getCupo() {
+		ArrayList<Integer> cuposPromo = new ArrayList<>();
+		
+		for(Atraccion cadaAtraccion : promociones ) {
+			//duracionAtraccionesTotal += cadaAtraccion.getDuracion();
+			cuposPromo.add(cadaAtraccion.getCupo());
+		}
+		
+		cupoMinimoTotal = Collections.min(cuposPromo);
+		
+		return cupoMinimoTotal;
+	}
+	
+	public double getCostoAtracciones() {
+		double costoAtraccionesTotal = 0;
+		
+		for(Atraccion cadaAtraccion : promociones ) {
+			costoAtraccionesTotal += cadaAtraccion.getCosto();
+		}
+		
+		return costoAtraccionesTotal;
+	}
+	
+
+	public double getDescuento() {
+		return montoPromo;
 	}
 
-	@Override
-	public String toString() {
-		return "\n NombrePromocion=" + nombrePromocion + "\n Lista de Atracciones = " + promociones
-				+ " \n PorcentajePromocion=" + porcentajePromocion + "\n TotalPromocionAbsoluta=" + totalPromocionAbsoluta
-				+ "\n AtraccionGratuita=" + atraccionGratuita + "]";
+	
+	
+	public synchronized void setCupo() {
+	
+		for(Atraccion cadaAtraccion : promociones ) {
+			cadaAtraccion.setCupo();
+		}
 	}
+	
+
+
+
+
+	@Override
+	public String formatoConsola() {
+		return String.format(" -Atracciones incluidas: [ %s ] \n -Duracion: %s horas \n -Precio original: $%s \n -Precio Con descuento: $%s \n", 
+			getNombre(), getDuracion(), getCosto(), getDescuento());
+
+	}
+
+
 	
 	
 }
