@@ -1,4 +1,4 @@
-package desafio4;
+package desafio;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,16 +6,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class LectorAtracciones {
+public class LectorPersonas {
 	
-	
-	
-	public static ArrayList<Atraccion> cargarAtracciones(String path) {
+	public static ArrayList<Persona> cargarPersonas(String path) {
 		
 		FileReader fr = null;
 		BufferedReader br = null;
 		
-		ArrayList<Atraccion> atracciones = new ArrayList<Atraccion>();//preparamos la lista de Personas
+		ArrayList<Persona> personas = new ArrayList<Persona>();//preparamos la lista de Personas
 				
 		try {
 			
@@ -33,13 +31,12 @@ public class LectorAtracciones {
 								
 				//Preparo los datos
 				String nombre = datos[0];
-				int costo = Integer.parseInt(datos[1]); 				
-				double duracion = Double.parseDouble(datos[2]); 	
-				int cupo = Integer.parseInt(datos[3]); 	
+				Integer dinero = Integer.parseInt(datos[1]); 				
+				Integer horasDisponibles = Integer.parseInt(datos[2]); 	
 
 				
-				//AGREGO LOS DATOS A LA LISTA atraccion, CREO UNa NUEVa persona cada vez que lee una linea
-				atracciones.add(new Atraccion(nombre, costo, duracion, cupo));
+				//AGREGO LOS DATOS A LA LISTA Personas, CREO UNa NUEVa persona cada vez que lee una linea
+				personas.add(new Persona(nombre, dinero, horasDisponibles));
 								
 				
 				linea = br.readLine(); //leemos cada linea
@@ -60,7 +57,7 @@ public class LectorAtracciones {
 			
 		}
 	
-		return atracciones;
+		return personas;
 	}
 	
 	

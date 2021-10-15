@@ -1,8 +1,0 @@
-Eowyn,10,8
-Gandalf,100,5
-Sam,36,8
-Galadriel,120,6
-Juana,15,5
-Pedro,150,3
-Angela,76,9
-Laura,10,10

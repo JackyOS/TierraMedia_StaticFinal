@@ -1,4 +1,4 @@
-package desafio4;
+package desafio;
 
 
 public class Persona {
