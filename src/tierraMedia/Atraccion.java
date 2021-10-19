@@ -21,7 +21,7 @@ public class Atraccion implements Ofertable {
 	}
 
 	@Override
-	public double getPrecioOriginal() {
+	public double getPrecio() {
 		return costoAtraccion;
 	}
 

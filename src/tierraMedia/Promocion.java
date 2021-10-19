@@ -1,8 +1,6 @@
 package tierraMedia;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public abstract class Promocion implements Ofertable {
@@ -29,10 +27,10 @@ public abstract class Promocion implements Ofertable {
 	}
 
 	@Override
-	public double getPrecioOriginal() { // precio SIN DESCUENTO
+	public double getPrecio() { // precio SIN DESCUENTO
 		double valor = 0;
 		for (Atraccion cadaAtraccion : listaAtracciones) {
-			valor += cadaAtraccion.getPrecioOriginal();
+			valor += cadaAtraccion.getPrecio();
 		}
 		return valor;
 	}
@@ -89,7 +87,7 @@ public abstract class Promocion implements Ofertable {
 		DecimalFormat df = new DecimalFormat("0.00");
 		return String.format(
 				"-Promocion: [ %s ] \n -Atracciones incluidas: [ %s ] \n -Duracion: %s horas \n -Precio original: $%s \n -Precio Con descuento: $%s \n",
-				getNombrePromo(), getNombre(), getDuracion(), getPrecioOriginal(), df.format(getDescuento()));
+				getNombrePromo(), getNombre(), getDuracion(), getPrecio(), df.format(getDescuento()));
 	}
 
 	@Override

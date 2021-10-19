@@ -75,7 +75,7 @@ public class TierraMedia {
 			
 			System.out.println("Sugerencias: ");
 			for (Ofertable cadaOferta : creandoOfertas()) {
-				if (cadaPersona.getPresupuesto() >= cadaOferta.getPrecioOriginal() && 
+				if (cadaPersona.getPresupuesto() >= cadaOferta.getPrecio() && 
 						cadaPersona.getHorasDisponibles() >= cadaOferta.getDuracion() && cadaOferta.hayCupo()) {
 					System.out.println(String.format("%s", cadaOferta.formatoConsola()));
 					while (!respuesta.equals("S")) {

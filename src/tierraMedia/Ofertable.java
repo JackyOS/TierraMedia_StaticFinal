@@ -1,7 +1,5 @@
 package tierraMedia;
 
-import java.util.List;
-
 public interface Ofertable {
 	public String getNombre();
 	
@@ -11,7 +9,7 @@ public interface Ofertable {
 	
 	public boolean estaIncluidaLaAtraccion();
 	
-	public double getPrecioOriginal();
+	public double getPrecio();
 	
 	public double getDuracion();
 	

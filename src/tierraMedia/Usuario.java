@@ -51,8 +51,8 @@ public class Usuario {
 
 	public void comprar(Ofertable cadaOferta) {
 		atraccionesNombres.add(cadaOferta.getNombre());
-		gastoTotal += (cadaOferta.soyPromocion()) ? cadaOferta.getDescuento() : cadaOferta.getPrecioOriginal();
-		this.presupuesto -= (cadaOferta.soyPromocion()) ? cadaOferta.getDescuento() : cadaOferta.getPrecioOriginal();
+		gastoTotal += (cadaOferta.soyPromocion()) ? cadaOferta.getDescuento() : cadaOferta.getPrecio();
+		this.presupuesto -= (cadaOferta.soyPromocion()) ? cadaOferta.getDescuento() : cadaOferta.getPrecio();
 		horasConsumidas += cadaOferta.getDuracion();
 		this.horasDisponibles -= cadaOferta.getDuracion();
 		cadaOferta.setCupo();

@@ -16,7 +16,7 @@ public class PromocionPorcentual extends Promocion {
 	}
 
 	public double getDescuento() {
-		return descuentoPorcentaje * super.getPrecioOriginal();
+		return descuentoPorcentaje * super.getPrecio();
 	}	
 }
 
