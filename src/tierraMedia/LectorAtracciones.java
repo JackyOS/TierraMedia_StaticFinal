@@ -1,18 +1,18 @@
-package desafio4;
+package tierraMedia;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class LectorUsuarios {
-
-	public static ArrayList<Usuario> cargarUsuarios(String path) {
+public class LectorAtracciones {
+	
+	public static ArrayList<Atraccion> cargarAtracciones(String path) {
 
 		FileReader fr = null;
 		BufferedReader br = null;
 
-		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();// preparamos la lista de Personas
+		ArrayList<Atraccion> atracciones = new ArrayList<Atraccion>();// preparamos la lista de Personas
 
 		try {
 
@@ -30,12 +30,13 @@ public class LectorUsuarios {
 
 				// Preparo los datos
 				String nombre = datos[0];
-				Integer dinero = Integer.parseInt(datos[1]);
-				Integer horasDisponibles = Integer.parseInt(datos[2]);
+				int costo = Integer.parseInt(datos[1]);
+				double duracion = Double.parseDouble(datos[2]);
+				int cupo = Integer.parseInt(datos[3]);
 
-				// AGREGO LOS DATOS A LA LISTA Personas, CREO UNa NUEVa persona cada vez que lee
-				// una linea
-				usuarios.add(new Usuario(nombre, dinero, horasDisponibles));
+				// AGREGO LOS DATOS A LA LISTA atraccion, CREO UNa NUEVa persona cada vez que
+				// lee una linea
+				atracciones.add(new Atraccion(nombre, costo, duracion, cupo));
 
 				linea = br.readLine(); // leemos cada linea
 			}
@@ -51,7 +52,10 @@ public class LectorUsuarios {
 					e.printStackTrace();
 				}
 			}
+
 		}
-		return usuarios;
+
+		return atracciones;
 	}
+
 }

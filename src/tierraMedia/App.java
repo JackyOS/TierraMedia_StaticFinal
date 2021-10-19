@@ -1,4 +1,6 @@
-package desafio4;
+package tierraMedia;
+
+import java.util.ArrayList;
 
 public class App {
 
@@ -9,18 +11,17 @@ public class App {
 		p.agregarListaPersonas("datos/Usuario");
 		p.agregarListaAtracciones("datos/Atraccion");
 		p.agregarListaPromociones("datos/Promocion");
+		ArrayList<String> gratuitas = new ArrayList<String>();
+		gratuitas.add("Erebor");
+		
+		
 
-		System.out.println("\t    - BIENVENIDOS A TIERRA MEDIA - ");
+		// System.out.println(p.getAtracciones());
 
-		//System.out.println(p.getAtracciones());
+		// System.out.println(p.getPromociones());
 
-		//System.out.println(p.getPromociones());
 		p.hacerSugerencia();
-		
-			
-		
 
-		
 	}
 
 }
