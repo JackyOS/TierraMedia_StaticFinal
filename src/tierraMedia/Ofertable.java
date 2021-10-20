@@ -17,5 +17,5 @@ public interface Ofertable {
 	
 	public boolean hayCupo();
 	
-	public void setCupo();
+	public void restarCupo();
 }

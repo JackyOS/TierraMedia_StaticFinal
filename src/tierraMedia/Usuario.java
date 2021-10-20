@@ -55,7 +55,7 @@ public class Usuario {
 		this.presupuesto -= (cadaOferta.soyPromocion()) ? cadaOferta.getDescuento() : cadaOferta.getPrecio();
 		horasConsumidas += cadaOferta.getDuracion();
 		this.horasDisponibles -= cadaOferta.getDuracion();
-		cadaOferta.setCupo();
+		cadaOferta.restarCupo();
 	}
 
 	public String formatoItinerario() {

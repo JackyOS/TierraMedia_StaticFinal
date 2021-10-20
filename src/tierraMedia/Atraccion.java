@@ -1,7 +1,5 @@
 package tierraMedia;
 
-import java.util.List;
-
 public class Atraccion implements Ofertable {
 	private String nombreAtraccion;
 	private double costoAtraccion;
@@ -43,7 +41,7 @@ public class Atraccion implements Ofertable {
 		return cupoAtraccion;
 	}
 
-	public synchronized void setCupo() {
+	public synchronized void restarCupo() {
 		this.cupoAtraccion--;
 	}
 

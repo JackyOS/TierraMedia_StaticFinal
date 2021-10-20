@@ -61,9 +61,9 @@ public abstract class Promocion implements Ofertable {
 		return verCupo;
 	}
 
-	public synchronized void setCupo() { // resta cupo
+	public synchronized void restarCupo() { // resta cupo
 		for (Atraccion cadaAtraccion : listaAtracciones) {
-			cadaAtraccion.setCupo();
+			cadaAtraccion.restarCupo();
 		}
 	}
 
