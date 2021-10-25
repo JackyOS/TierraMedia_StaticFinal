@@ -1,0 +1,33 @@
+	  -- Itinerario -- 
+ 
+ -Usuario: Pepa 
+ 
+ -Ofertas compradas:
+
+ -Promoción: Degustacion Gold 
+ -Atracciones incluidas: Lothlorien, Erebor, La Comarca 
+ -Duración: 10.5 horas 
+ -Precio original: $50.0 
+ -Precio con descuento: $46.00 
+
+,  -Promoción: Degustacion Light 
+ -Atracciones incluidas: Bosque Negro, Moria 
+ -Duración: 6.0 horas 
+ -Precio original: $13.0 
+ -Precio con descuento: $10.00 
+
+,  -Atracción: Minas Tirith 
+ -Duración: 2.5 horas 
+ -Precio: $5.0 
+
+,  -Atracción: Abismo de Helm 
+ -Duración: 2.0 horas 
+ -Precio: $5.0 
+
+------------------------------ 
+ -Ofertas: Degustacion Gold, Degustacion Light, Minas Tirith, Abismo de Helm 
+ -Duración Total: 21.0 horas 
+ -Gasto Total: $66.00 
+------------------------------
+ -Dinero disponible: 1934.00 
+ -Tiempo disponible: 79.0

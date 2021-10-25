@@ -1,0 +1,29 @@
+	  -- Itinerario -- 
+ 
+ -Usuario: Ricky Ricon 
+ 
+ -Ofertas compradas:
+
+ -Promoción: Aventura Plus 
+ -Atracciones incluidas: Mordor, Bosque Negro, Lothlorien 
+ -Duración: 8.0 horas 
+ -Precio original: $63.0 
+ -Precio con descuento: $56.70 
+
+,  -Promoción: Fantastico 
+ -Atracciones incluidas: Erebor, Moria, Abismo de Helm, Minas Tirith 
+ -Duración: 9.5 horas 
+ -Precio original: $32.0 
+ -Precio con descuento: $22.00 
+
+,  -Atracción: La Comarca 
+ -Duración: 6.5 horas 
+ -Precio: $3.0 
+
+------------------------------ 
+ -Ofertas: Aventura Plus, Fantastico, La Comarca 
+ -Duración Total: 24.0 horas 
+ -Gasto Total: $81.70 
+------------------------------
+ -Dinero disponible: 918.30 
+ -Tiempo disponible: 26.0

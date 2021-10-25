@@ -1,0 +1,21 @@
+	  -- Itinerario -- 
+ 
+ -Usuario: Galadriel 
+ 
+ -Ofertas compradas:
+
+ -Atracción: Erebor 
+ -Duración: 3.0 horas 
+ -Precio: $12.0 
+
+,  -Atracción: Moria 
+ -Duración: 2.0 horas 
+ -Precio: $10.0 
+
+------------------------------ 
+ -Ofertas: Erebor, Moria 
+ -Duración Total: 5.0 horas 
+ -Gasto Total: $22.00 
+------------------------------
+ -Dinero disponible: 98.00 
+ -Tiempo disponible: 1.0
