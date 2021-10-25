@@ -4,30 +4,26 @@
  
  -Ofertas compradas:
 
- -Promoción: Degustacion Gold 
- -Atracciones incluidas: Lothlorien, Erebor, La Comarca 
- -Duración: 10.5 horas 
- -Precio original: $50.0 
- -Precio con descuento: $46.00 
+ -Promoción: Aventura Plus 
+ -Atracciones incluidas: Mordor, Bosque Negro, Lothlorien 
+ -Duración: 8.0 horas 
+ -Precio original: $63.0 
+ -Precio con descuento: $56.70 
 
-,  -Promoción: Degustacion Light 
- -Atracciones incluidas: Bosque Negro, Moria 
- -Duración: 6.0 horas 
- -Precio original: $13.0 
- -Precio con descuento: $10.00 
+,  -Promoción: Fantastico 
+ -Atracciones incluidas: Erebor, Moria, Abismo de Helm, Minas Tirith 
+ -Duración: 9.5 horas 
+ -Precio original: $32.0 
+ -Precio con descuento: $22.00 
 
-,  -Atracción: Minas Tirith 
- -Duración: 2.5 horas 
- -Precio: $5.0 
-
-,  -Atracción: Abismo de Helm 
- -Duración: 2.0 horas 
- -Precio: $5.0 
+,  -Atracción: La Comarca 
+ -Duración: 6.5 horas 
+ -Precio: $3.0 
 
 ------------------------------ 
- -Ofertas: Degustacion Gold, Degustacion Light, Minas Tirith, Abismo de Helm 
- -Duración Total: 21.0 horas 
- -Gasto Total: $66.00 
+ -Ofertas: Aventura Plus, Fantastico, La Comarca 
+ -Duración Total: 24.0 horas 
+ -Gasto Total: $81.70 
 ------------------------------
- -Dinero disponible: 1934.00 
- -Tiempo disponible: 79.0
+ -Dinero disponible: 1918.30 
+ -Tiempo disponible: 76.0

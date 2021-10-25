@@ -4,16 +4,16 @@
  
  -Ofertas compradas:
 
- -Promoción: Degustacion 
- -Atracciones incluidas: Lothlorien, La Comarca 
+ -Promoción: Super Aventura 
+ -Atracciones incluidas: Minas Tirith, Abismo de Helm, Erebor 
  -Duración: 7.5 horas 
- -Precio original: $38.0 
- -Precio con descuento: $36.00 
+ -Precio original: $22.0 
+ -Precio con descuento: $10.00 
 
 ------------------------------ 
- -Ofertas: Degustacion 
+ -Ofertas: Super Aventura 
  -Duración Total: 7.5 horas 
- -Gasto Total: $36.00 
+ -Gasto Total: $10.00 
 ------------------------------
- -Dinero disponible: 0.00 
+ -Dinero disponible: 26.00 
  -Tiempo disponible: 0.5

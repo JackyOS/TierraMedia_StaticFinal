@@ -4,16 +4,18 @@
  
  -Ofertas compradas:
 
- -Promoción: Aventura Plus 
- -Atracciones incluidas: Mordor, Bosque Negro, Lothlorien 
- -Duración: 8.0 horas 
- -Precio original: $63.0 
- -Precio con descuento: $56.70 
+ -Atracción: Mordor 
+ -Duración: 3.0 horas 
+ -Precio: $25.0 
+
+,  -Atracción: Erebor 
+ -Duración: 3.0 horas 
+ -Precio: $12.0 
 
 ------------------------------ 
- -Ofertas: Aventura Plus 
- -Duración Total: 8.0 horas 
- -Gasto Total: $56.70 
+ -Ofertas: Mordor, Erebor 
+ -Duración Total: 6.0 horas 
+ -Gasto Total: $37.00 
 ------------------------------
- -Dinero disponible: 43.30 
- -Tiempo disponible: 0.0
+ -Dinero disponible: 63.00 
+ -Tiempo disponible: 2.0

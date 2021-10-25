@@ -4,18 +4,18 @@
  
  -Ofertas compradas:
 
- -Atracción: Lothlorien 
- -Duración: 1.0 horas 
- -Precio: $35.0 
+ -Atracción: Moria 
+ -Duración: 2.0 horas 
+ -Precio: $10.0 
 
-,  -Atracción: Mordor 
- -Duración: 3.0 horas 
- -Precio: $25.0 
+,  -Atracción: Minas Tirith 
+ -Duración: 2.5 horas 
+ -Precio: $5.0 
 
 ------------------------------ 
- -Ofertas: Lothlorien, Mordor 
- -Duración Total: 4.0 horas 
- -Gasto Total: $60.00 
+ -Ofertas: Moria, Minas Tirith 
+ -Duración Total: 4.5 horas 
+ -Gasto Total: $15.00 
 ------------------------------
- -Dinero disponible: 40.00 
- -Tiempo disponible: 1.0
+ -Dinero disponible: 85.00 
+ -Tiempo disponible: 0.5

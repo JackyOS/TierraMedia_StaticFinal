@@ -31,7 +31,7 @@ public abstract class Promocion implements Ofertable {
 		return 0.0;
 	}
 
-	public double getPrecioSinDescuento() { // precio sin descuento que sobreescriben las promos hijas
+	public double getPrecioSinDescuento() {
 		double valor = 0;
 		for (Atraccion cadaAtraccion : listaAtracciones) {
 			valor += cadaAtraccion.getPrecio();

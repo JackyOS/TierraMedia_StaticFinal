@@ -90,7 +90,7 @@ public class TierraMedia {
 
 	public void hacerCompra(Ofertable cadaOferta, Usuario cadaUsuario) throws RuntimeException { // Metodo para
 																									// posibilitar el
-																									// testeo (jnuit)
+																									// testeo (junit)
 
 		if (aplicarFiltrosDeCompra(cadaOferta, cadaUsuario)) {
 			cadaUsuario.comprar(cadaOferta);
